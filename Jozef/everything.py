@@ -11,11 +11,12 @@ import os
 import json 
 
 
+
 class ToDoListApp:
     def __init__(self):
-        self.FILENAME = "tasks.json"
-        self.FINISHED_FILENAME = "finished_tasks.json"
-        self.HABIT_FILENAME = "habits.json"
+        self.FILENAME = "Jozef/tasks.json"
+        self.FINISHED_FILENAME = "Jozef/finished_tasks.json"
+        self.HABIT_FILENAME = "Jozef/habits.json"
         self.load_data()
         self.finished_counts = {}
         
@@ -28,7 +29,7 @@ class ToDoListApp:
         self.frm.pack_propagate(False)
         self.frm.pack()
 
-        self.root.tk.call('source', 'forest-dark.tcl')
+        self.root.tk.call('source', 'Jozef/forest-dark.tcl')
         ttk.Style().theme_use('forest-dark')
         
         self.menu_buttons(self.frm)
@@ -415,7 +416,6 @@ class ToDoListApp:
         )
         add_habit_button.pack()
 
-    # Rest of your code...
 
     def update_habit_type_ui(self, event):
         habit_type = self.habit_type_var.get()
